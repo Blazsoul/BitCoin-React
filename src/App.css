@@ -1,0 +1,87 @@
+/* @import 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'; */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+ul{
+  padding: 0;
+  list-style-type: none;
+}
+.selectedNav {
+ 
+  color:red;
+  
+}
+a:link {
+  text-decoration: none;
+}
+
+/* ------------------------Components---------- */
+.contact-preview{
+  padding: 5px;
+  margin-left:20px;
+  transition: all 0.2s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact-preview:hover{
+  background-color: rgba(119, 136, 153, 0.479);
+
+}
+.contact-preview p{
+  margin-left:10px;
+}
+.contact-search{
+  margin-top: 20px;
+}
+.search-input{
+  border-radius: 5px;
+  width:100%;
+}
+/* ------------------------End-Of-Components---------- */
+
+/* ------------------Helpers---------------- */
+.flex {
+  display: flex;
+}
+.justify-center{
+  justify-content: center
+}
+.align-center{
+  align-items: center;
+}
+.dir-row{
+  flex-direction: row;
+}
+.dir-col{
+  flex-direction: column;
+}
+.space-between{
+  justify-content: space-between;
+}
+/* ------------------End-Of-Helpers---------------- */
