@@ -7,14 +7,14 @@ class ContactEdit extends Component {
     contact: null
   };
   componentDidMount() {
-    console.log("params?", this.props);
     ContactService.getContactById(this.props.match.params.id)
       .then(contact => {
-        console.log(contact);
+        console.log('contact',contact);
         if (contact) this.setState({ contact });
+        else {}
       })
       .catch(err => {
-        this.setState({ contact: ContactService.getEmptyContact() });
+        this.setState({contact : ContactService.getEmptyContact()})
       });
   }
 
@@ -22,8 +22,8 @@ class ContactEdit extends Component {
     let newContact = { ...this.state.contact, ...obj };
     ContactService.saveContact(newContact).then(_ => {
       console.log("updated");
+      this.props.history.push("/contact");
     });
-    this.props.history.push("/contact");
   };
   renderContact() {
     let contact = this.state.contact;

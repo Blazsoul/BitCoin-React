@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router,Switch, Route, Link,NavLink } from 'react-router-dom'
 
 import './App.css';
-import ContactPage from './views/contact/ContactPage'
-import ContactEdit from './views/contact/ContactEdit/ContactEdit'
-import ContactDetails from './views/contact/ContactDetailsPage'
+import ContactPage from './views/contact/ContactApp/ContactPage'
+import ContactEdit from './views/contact/ContactEdit/ContactEditPage'
+import ContactDetails from './views/contact/ContactDetails/ContactDetailsPage'
 import NavBar from './components/NavBar/NavBar'
 
 
@@ -22,6 +22,7 @@ class App extends Component {
         <Route>
           <Switch>
              <Route exact path="/contact/:id/edit" component={ContactEdit} />  
+             <Route exact path="/contact/edit" component={ContactEdit} />  
              <Route exact path="/contact/:id" component={ContactDetails} />  
              <Route exact path="/contact" component={ContactPage} />  
              <Route path="/about" component={this.About} />  

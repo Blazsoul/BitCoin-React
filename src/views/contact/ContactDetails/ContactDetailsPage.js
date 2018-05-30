@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ContactService from "../../services/ContactService";
+import ContactService from "../../../services/ContactService";
 import {Link} from 'react-router-dom'
 
 class ContactDetailsPage extends Component {
@@ -8,7 +8,6 @@ class ContactDetailsPage extends Component {
     contact: null
   };
   componentDidMount(){
-    console.log('params?',this.props)
     ContactService.getContactById(this.props.match.params.id).then(contact => {
     console.log(contact);
     this.setState({ contact });
